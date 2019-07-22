@@ -7,12 +7,33 @@
     "@tensorflow-models/body-pix": "^1.1.1",
     "@tensorflow/tfjs": "^1.2.3"
   },
+  "devDependencies": {
+    "eslint": "~4.19.1",
+    "eslint-config-google": "~0.9.1"
+  },
   "scripts": {
     "watch": "cross-env NODE_ENV=development parcel index.html --no-hmr --open ",
     "build": "cross-env NODE_ENV=production parcel build index.html  --no-minify --public-url ./",
     "lint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "eslintConfig": {
+    "extends": "google",
+    "rules": {
+      "require-jsdoc": 0,
+      "valid-jsdoc": 0
+    },
+    "env": {
+      "es6": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 8,
+      "sourceType": "module"
+    }
+  },
+  "eslintIgnore": [
+    "dist/"
+  ],
   "author": "yashovardhanagrawal",
   "license": "MIT"
 }
