@@ -80,7 +80,7 @@ async function getConstraints(cameraLabel) {
 }
 
 async function setupCamera(cameraLabel) {
-    if(!navigator.mediadevices || !navigator.mediaDevices.getUserMedia) {
+    if(!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
         throw new Error(
             'Browser API navigator.mediaDevices.getUserMedia not available'
         );
@@ -132,7 +132,7 @@ const guiState = {
         segmentationThreshold: 0.5,
         effect: 'mask',
         maskBackground: true,
-        opacity: '0.7',
+        opacity: 0.7,
         backgroundBlurAmount: 3,
         maskBlurAmount: 0,
         edgeBlurAmount: 3,
